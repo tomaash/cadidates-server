@@ -2,7 +2,7 @@ var HAPI   = require("hapi")
 var HAPICo = require("hapi-plugin-co")
 
 var server = new HAPI.Server({ debug: { request: [ "error" ] } })
-server.connection({ address: "127.0.0.1", port: 12345 })
+server.connection({ address: "127.0.0.1", port: process.env.PORT || 12345 })
 server.register(HAPICo, function () {
     server.route({
         method:  "GET",
