@@ -13,6 +13,7 @@
   "devDependencies": {},
   "dependencies": {
     "hapi": "^13.4.1",
-    "hapi-plugin-co": "^0.9.0"
+    "hapi-plugin-co": "^0.9.0",
+    "mongoose": "^4.5.3"
   }
 }
