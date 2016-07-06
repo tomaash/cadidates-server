@@ -9,10 +9,7 @@ mongoose.Promise = global.Promise;
 
 // Here we find an appropriate database to connect to, defaulting to
 // localhost if we don't find one.
-var uristring =
-  process.env.MONGOLAB_URI ||
-  process.env.MONGOHQ_URL ||
-  'mongodb://localhost/pipe-server';
+var uristring = process.env.MONGODB_URI || 'mongodb://localhost/pipe-server';
 
 // Makes connection asynchronously.  Mongoose will queue up database
 // operations and release them when the connection is complete.
