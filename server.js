@@ -52,7 +52,10 @@ server.register(HAPICo, function() {
   server.route({
     method: 'POST',
     path: '/candidates',
-    handler: candidates.create
+    handler: candidates.create,
+    config: {
+      validate: candidates.createValidator
+    }
   })
 
   server.route({
