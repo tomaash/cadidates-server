@@ -44,6 +44,12 @@ server.register(HAPICo, function() {
   })
 
   server.route({
+    method: 'GET',
+    path: '/sample-error',
+    handler: candidates.sampleError
+  })
+
+  server.route({
     method: 'POST',
     path: '/candidates',
     handler: candidates.create

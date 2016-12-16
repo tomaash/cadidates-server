@@ -14,6 +14,10 @@ exports.foo = function * (request, reply) {
   reply({ value: value })
 }
 
+exports.sampleError = function * (request, reply) {
+  throw Boom.create(503, "Don't feel like serving")
+}
+
 exports.create = function * (request, reply) {
   console.log(request.payload);
   var result = yield Candidate.create(request.payload);
